@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var credits = 1000
     @State private var numbers = [0,0,0]
-    private var symbols = ["apple", "star", "cherry"]
+    @State private var symbols = ["apple", "star", "cherry"]
     private var betAmount = 5
     var body: some View {
         ZStack {
@@ -43,21 +43,9 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Image(self.symbols[self.numbers[0]])
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5))
-                        .cornerRadius(20)
-                    Image(self.symbols[self.numbers[1]])
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5))
-                        .cornerRadius(20)
-                    Image(self.symbols[self.numbers[2]])
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5))
-                        .cornerRadius(20)
+                    CardView(symbol: $symbols[numbers[0]])
+                    CardView(symbol: $symbols[numbers[1]])
+                    CardView(symbol: $symbols[numbers[2]])
                     Spacer()
                 }
                 Spacer()

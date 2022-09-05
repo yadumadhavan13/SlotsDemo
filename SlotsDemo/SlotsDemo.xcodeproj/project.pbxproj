@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024135D928C6635B00D439E1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024135D828C6635B00D439E1 /* CardView.swift */; };
 		02E7670628C4FF9900A1E9DE /* SlotsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7670528C4FF9900A1E9DE /* SlotsDemoApp.swift */; };
 		02E7670828C4FF9900A1E9DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7670728C4FF9900A1E9DE /* ContentView.swift */; };
 		02E7670A28C4FF9C00A1E9DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02E7670928C4FF9C00A1E9DE /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		024135D828C6635B00D439E1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		02E7670228C4FF9900A1E9DE /* SlotsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E7670528C4FF9900A1E9DE /* SlotsDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsDemoApp.swift; sourceTree = "<group>"; };
 		02E7670728C4FF9900A1E9DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				02E7670528C4FF9900A1E9DE /* SlotsDemoApp.swift */,
 				02E7670728C4FF9900A1E9DE /* ContentView.swift */,
+				024135D828C6635B00D439E1 /* CardView.swift */,
 				02E7670928C4FF9C00A1E9DE /* Assets.xcassets */,
 				02E7670B28C4FF9C00A1E9DE /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				02E7670828C4FF9900A1E9DE /* ContentView.swift in Sources */,
 				02E7670628C4FF9900A1E9DE /* SlotsDemoApp.swift in Sources */,
+				024135D928C6635B00D439E1 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
