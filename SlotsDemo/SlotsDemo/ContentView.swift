@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var credits = 1000
     @State private var numbers = [0,0,0]
     @State private var symbols = ["apple", "star", "cherry"]
+    @State private var backgrounds = [Color.white, Color.white, Color.white]
     private var betAmount = 5
     var body: some View {
         ZStack {
@@ -43,20 +44,28 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    CardView(symbol: $symbols[numbers[0]])
-                    CardView(symbol: $symbols[numbers[1]])
-                    CardView(symbol: $symbols[numbers[2]])
+                    CardView(symbol: $symbols[numbers[0]], background: $backgrounds[numbers[0]])
+                    CardView(symbol: $symbols[numbers[1]], background: $backgrounds[numbers[1]])
+                    CardView(symbol: $symbols[numbers[2]], background: $backgrounds[numbers[2]])
                     Spacer()
                 }
                 Spacer()
                 //Button
                 Button {
+                    //set background to white
+                    self.backgrounds = self.backgrounds.map { _ in
+                        Color.white
+                    }
                     //Change the images
-                    self.numbers[0] = Int.random(in: 0...symbols.count - 1)
-                    self.numbers[1] = Int.random(in: 0...symbols.count - 1)
-                    self.numbers[2] = Int.random(in: 0...symbols.count - 1)
+                    self.numbers = self.numbers.map({ _ in
+                        Int.random(in: 0...symbols.count - 1)
+                    })
                     if self.numbers[0] == self.numbers[1] && self.numbers[1] == self.numbers[2] {
                         self.credits = self.betAmount * 10
+                        //set background to green
+                        self.backgrounds = self.backgrounds.map { _ in
+                            Color.green
+                        }
                     } else {
                         self.credits -= self.betAmount
                     }
